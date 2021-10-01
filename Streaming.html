@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:locale" content="en-US">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Pagina</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="pag.css">
+</head>
+<body>
+    <header class="title">
+        <h1></h1>
+    </header>
+
+    <div class="container">
+        <header class="header">
+             <h2> Servidor de Streaming </h2>
+        </header>
+
+        <main class="content">
+            <h3 class="video_name">Video: Trailer of Sintel the movie</h3>
+            <h3 class="anuncio">Todos los cambios se hacen respecto al video original</h3>
+            <article class="article">
+                <h2>Video 1 Original (y4m) </h2>
+                <video  class="center" id="movie1" width="566" height="281" controls preload="none">
+                    <source src="Videos/sintel.mp4"  type='video/mp4'> 
+                </video> 
+                
+                <p class="InfoVideo">
+                    codec: rawvideo
+                    fps: 24 <br>
+                    bitRate: 597197 Kb/s <br>
+                    resolución: 1920x1080p <br>
+                    contenedor de audio: I420<br>
+                </p>
+            </article>
+            <article class="article">
+                <h2>Video 2: Resolucion 854x480 & 10fps </h2>
+                <video class="center" id="movie" width="566" height="281" controls preload="none">
+                    <source src="Videos/sintel_480_10fps.mp4"  type='video/mp4'>
+                </video> 
+                <p class="InfoVideo">
+                    codec: h264
+                    fps: 10 <br>
+                    bitRate: 118058 Kb/s <br>
+                    resolución: 854x480 <br>
+                    contenedor de audio: avc1<br>
+            </article>
+            <article class="article">
+                <h2>Video 3 formato mp4 </h2>
+                <video class="center" id="movie" width="566" height="281" controls preload="none">
+                    <source src="Videos/sintel.mp4"  type='video/mp4'>
+                </video> 
+                <p class="InfoVideo">
+                    codec: h264
+                    fps: 24 <br>
+                    bitRate: 1826 Kb/s <br>
+                    resolución: 1920x1080 <br>
+                    contenedor de audio: avc1<br>
+
+            </article>
+            <article class="article">
+                <h2>Video 4 formato yuv420 </h2>
+                <video  class="center" id="movie4" width="566" height="281" controls preload="none" >
+                    <source src="Videos/sintel_audio.mp4"  type='video/mp4'>
+                </video> 
+                <p class="InfoVideo">
+                    codec: vp9
+                    fps: 24 <br>
+                    bitRate: 1096 Kb/s <br>
+                    resolución: 1920x1080p <br>
+                    contenedor de audio: mp4a<br>
+            </article>
+            <article class="article">
+                <h2>Video 5 Resolusion 720 + audio </h2>
+                <video class="center" id="movie" width="566" height="281" controls preload="none">
+                    <source src="Videos/sintel_audio.mp4"  type='video/mp4'>
+                </video> 
+                <p class="InfoVideo">
+                    codec: h264 <br>
+                    fps: 24<br>
+                    bitRate: 1038 Kb/s <br>
+                    resolución: 1280x720p <br>
+                    contenedor de audio: mp4a<br>
+                </p>
+                
+            </article>
+        </main>
+        <aside class="sidebar">
+           
+            <div class="image">
+                <img src="Imagenes\png_1920x1080.png" alt="">
+                <p class="InfoImg">
+                    contenedor de imagen: png <br>
+                    resolución: 1920x1080p 
+                </p>
+            </div>
+            <div class="image">
+                <img src="Imagenes/uno.png" alt="">
+                <p class="InfoImg">
+                    contenedor de imagen: png <br>
+                    resolución: 840x480p 
+                </p>
+            </div>
+
+            <div class="image">
+                <img src="Imagenes/dosmejor.png" alt="">
+                <p class="InfoImg">
+                    contenedor de imagen: png <br>
+                    resolución: 220x180p 
+                </p>
+            </div>
+
+            <div class="image">
+                <img src="Imagenes/unomejor.gif" alt="">
+                <p class="InfoImg">
+                    contenedor de imagen: gif <br>
+                    resolución: 220x180p 
+                </p>
+            </div>
+            <div class="image">
+                <img src="Imagenes/dos.png" alt="">
+                <p class="InfoImg">
+                    contenedor de imagen: png <br>
+                    resolución: 840x480p 
+                </p>
+            </div>
+            <div class="image">
+                <img src="Imagenes\gif_1920x1080.gif" alt="">
+                <p class="InfoImg">
+                    contenedor de imagen: gif <br>
+                    resolución: 1920x1080p 
+                </p>
+            </div>
+            <div class="image">
+                <img src="Imagenes/dosmejor.png" alt="">
+                <p class="InfoImg">
+                    contenedor de imagen: png <br>
+                    resolución: 220x180p 
+                </p>
+            </div>
+        </aside>
+
+        <div class="related-post">
+            <a class="uno">
+                <h2>
+                <i class="fa fa-address-card" style="font-size:20px" ></i> 
+                Chrystiam Acosta
+                </h2>
+                <img src="Imagenes/foto_chrys.jpg" alt="" class="foto1">
+            </a>
+            <a href="https://github.com/crysii27" class="info1">
+                <i class="fa fa-github" style="font-size:20px">Github
+                </i> 
+            </a>
+            <a href="https://www.linkedin.com/in/christian-acosta-980b49203/" class="info1">
+                <i class="fa fa-linkedin-square" style="font-size:20px" >Linkedin
+                </i> 
+            </a>
+            <a class="info1">
+                <i class="fa fa-map-marker" style="font-size:20px" >Medellín, Colombia
+                </i> 
+            </a>
+        </div>
+        
+        <footer class="footer">
+            <p>Estudiantes de ingeniería en telecomunicaciones de <a href="https://www.upb.edu.co/">Universidad Pontificia Bolivariana</a></p>
+        </footer>
+    </div>
+
+</body>
+</html>

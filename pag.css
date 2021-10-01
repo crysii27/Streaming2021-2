@@ -1,0 +1,224 @@
+html {
+    box-sizing: border-box;
+    background-size: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*:before,
+*:after{
+    box-sizing: inherit;
+}
+
+body{
+    background-color:  black;
+    background-image: linear-gradient(45deg, transparent 10%, yellow 25%, transparent 25%), 
+                    linear-gradient(-45deg, transparent 20%, yellow 25%, transparent 25%), 
+                    linear-gradient(-45deg, transparent 75%, yellow 80%, transparent 0),
+                    radial-gradient(red 2px, transparent 0);
+    background-size: 30px 30px, 30px 30px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* header */
+
+
+.title h1 {
+    padding: 20px 0;
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+    background-color: #252325;
+    width: 90%;
+    max-width: 1500px;
+    margin: 1.6em auto;
+    color: white;
+} 
+
+.header h2 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.container {
+    background-color: white;
+    width: 90%;
+    max-width: 1500px;
+    margin: 1.6em auto;
+
+    display: grid;
+    gap: 1.6em;
+    /* crear numero de columnas */
+    grid-template-columns: repeat(5, 1fr);
+}
+
+/* marcar los contenedores  */
+.container > .header,
+.container > .content,
+.container > .sidebar,
+.container > .footer, 
+.container > div {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+/* ponemos el header y el footer de todo el margin */
+.container .header,
+.container .footer{
+    /* grid-column: 1/6; se pone el header y el footer 1 solo para las 6 columnas */
+    grid-column: 1/6;
+    background-color: #252325;
+    color: white;
+}
+
+.container > .content{
+    /* grid-column: span 3; es lo mismo que 1/5 */
+    grid-column: span 3;
+    background-color: rgb(151, 148, 148);
+}
+
+.content > .article {
+    background-color: rgb(31, 30, 30);
+    padding: 50px;
+    margin-top: 10px;
+    color: white;
+}
+
+.content .article .center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.content .article h2{
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(151, 148, 148);
+}
+
+.content .article p{
+    padding: 10px;
+    text-align: center;
+}
+
+.container .sidebar img {
+    width: 100%;
+    margin-top: 5px;
+}
+.container .sidebar p{
+    text-align: center;
+}
+
+.container > .sidebar {
+    grid-column: span 2;
+    background-color: rgb(31, 30, 30);
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container > .related-post {
+    grid-column: span 5;
+    background-color: rgb(31, 30, 30);
+    color: white;
+    height: 280px;
+    margin-top: 5px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+
+.related-post img.foto1{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: relative;
+    left: -150px;
+    bottom: -90px;
+}
+
+.related-post img.foto2{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: relative;
+    left: -132px;
+    bottom: -90px;
+}
+.related-post img.foto3{
+    width: 160px;
+    height: 150px;
+    border-radius: 50%;
+    position: relative;
+    left: -90px;
+    bottom: -90px;
+}
+.related-post img.foto4{
+    width: 160px;
+    height: 150px;
+    border-radius: 50%;
+    position: relative;
+    left: -190px;
+    bottom: -90px;
+}
+
+.related-post h2{
+    position: relative;
+    left: 50px;
+    bottom: 10px;
+}
+.container > .related-post:hover{
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    background-color: rgb(83, 80, 80);
+    padding: 5px;
+}
+
+.related-post > .info1:hover{
+    color: black;
+}
+.related-post >.uno{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.related-post > .info1 {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+
+.footer a{
+    list-style: none;
+    text-decoration: none;
+}
+
+
+
+/* para hacerlo responsive */
+@media screen and (max-width: 768px){
+    .header{
+        text-align: center;
+    }
+    .container .content{
+        grid-column: 1/-1;
+    }
+
+    .container .sidebar{
+        grid-column: 1/-1;
+    }
+
+    .container .related-post{
+        grid-column: 1/-1;
+    }
+}
